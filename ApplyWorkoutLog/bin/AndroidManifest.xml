@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.applyworkout"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:maxSdkVersion="19"
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.applyworkout.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.applyworkout.PageNew"
+            android:label="@string/title_activity_page_new" >
+        </activity>
+        <activity
+            android:name="com.example.applyworkout.ShowRes"
+            android:label="@string/title_activity_show_res" >
+        </activity>
+        <activity android:name="com.example.applyworkout.store" >
+        </activity>
+        <activity
+            android:name="com.example.applyworkout.GrafActivity"
+            android:label="@string/title_activity_graf" >
+        </activity>
+        <activity
+            android:name="com.example.applyworkout.ProfileActivity"
+            android:label="@string/title_activity_profile" >
+        </activity>
+        <activity
+            android:name="com.example.applyworkout.ResSelect"
+            android:label="@string/title_activity_res_select" >
+        </activity>
+    </application>
+
+</manifest>

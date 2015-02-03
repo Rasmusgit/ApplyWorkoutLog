@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ProfileActivity" >
+
+    <EditText
+        android:id="@+id/editLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/Length"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/editWeigth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editLength"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/Weigth"
+        android:inputType="numberDecimal" />
+
+    <AutoCompleteTextView
+        android:id="@+id/editMotiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editWeigth"
+        android:layout_below="@+id/editWeigth"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/Motivation" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editMotiv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:onClick="@string/ckSave"
+        android:text="@string/strSave" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio0"
+        android:layout_centerHorizontal="true" >
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/radio0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/radio1"
+        android:layout_alignBottom="@+id/radio1"
+        android:layout_toLeftOf="@+id/headProfile"
+        android:checked="true"
+        android:text="@string/maleSym"
+        android:textSize="@dimen/n12" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editLength"
+        android:layout_below="@+id/radioGroup1"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="@string/Name"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/headProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:text="@string/Profile"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RadioButton
+        android:id="@+id/radio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headProfile"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/headProfile"
+        android:text="@string/femSym"
+        android:textSize="@dimen/n12" />
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Spinner
+        android:id="@+id/spinnerEX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editSet"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:entries="@array/exercise"
+        android:prompt="@string/exercise_prompt" />
+
+    <EditText
+        android:id="@+id/editComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingMode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="@string/comnet"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/textWeigth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editComment"
+        android:layout_below="@+id/editSet"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="@string/strW"
+        android:inputType="numberSigned"
+        android:textColorLink="@color/darkGray"
+        android:width="@dimen/sInput" />
+
+    <RatingBar
+        android:id="@+id/ratingMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textWeigth"
+        android:layout_below="@+id/textWeigth"
+        android:layout_marginTop="18dp" />
+
+    <Button
+        android:id="@+id/submit"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editComment"
+        android:layout_below="@+id/editComment"
+        android:layout_marginTop="18dp"
+        android:onClick="ckSubmit"
+        android:text="@string/buttons" />
+
+    <EditText
+        android:id="@+id/editSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textWeigth"
+        android:layout_below="@+id/spinnerEX"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:hint="@string/set"
+        android:inputType="numberSigned"
+        android:prompt="@string/set"
+        android:textColorLink="@color/darkGray"
+        android:width="@dimen/sInput" />
+
+    <EditText
+        android:id="@+id/editRep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textWeigth"
+        android:layout_alignRight="@+id/ratingMode"
+        android:ems="10"
+        android:hint="@string/rep"
+        android:inputType="numberSigned"
+        android:textColorLink="@color/darkGray"
+        android:width="@dimen/sInput" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
